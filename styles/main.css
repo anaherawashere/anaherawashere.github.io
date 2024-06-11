@@ -2,7 +2,28 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.nav-logo {
+  width: 50px;
+  height: auto;
+}
 
+.nav-menu-item {
+  color: #000;
+  text-decoration: none;  
+}
+
+.nav-menu-item:hover {
+  color: #FFB8C9;
+  /* text-decoration: underline; */
+  transition-delay: 0.04s;
+}
+
+.blog-preview {
+  background-color: #E3E5E6;
+  width: 30vw;
+  border-radius: 20px;
+  padding: 30px;
+}
 
 /* widescreen displays */
 @media only screen and (min-width: 920px) {
