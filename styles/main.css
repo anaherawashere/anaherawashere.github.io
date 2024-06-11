@@ -1,18 +1,36 @@
 * {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 2em;
   font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
   --color-blue: #52757a;
   --color-grey: #f5f5f5;
   --color-lightblue: #e6edef;
 }
 
-body {
-  margin-left: 72px;
-  margin-right: 72px;
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.nav-logo {
-  width: 50px;
-  height: auto;
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 a {
@@ -20,9 +38,19 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: var(--color-blue);
-  transition-delay: 0.04s;
+}
+
+header {
+  width: 100%;
+  padding: 4em 0;
+}
+
+.nav-logo {
+  width: 50px;
+  height: auto;
 }
 
 .blog-preview-list {
@@ -33,10 +61,10 @@ a:hover {
   align-content: stretch;
 }
 
-.blog-preview {
+.blog-preview-block {
   background-color: var(--color-grey);
-  width: calc(50% - 72px);
-  max-width: 500px;
+  width: calc(33% - 70px);
+  /* max-width: 500px; */
   border-radius: 20px;
   padding: 30px;
   display: flex;
@@ -44,12 +72,12 @@ a:hover {
   align-content: space-between;
 }
 
-.blog-preview:hover {
+.blog-preview-block:hover {
   box-shadow: rgba(32, 32, 32, 0.2) 0px 8px 24px;
   transition: 0.2s;
 }
 
-.blog-image {
+.blog-preview-image {
   max-width: 250px;
   max-height: 300px;
   margin: auto;
@@ -72,11 +100,12 @@ a:hover {
 /* phones */
 @media only screen and (max-width: 400px) {
   body {
+    width: 90vw;
     margin-left: 10px;
     margin-right: 10px;
   }
 
-  .blog-preview {
+  .blog-preview-block {
     width: 100%;
   }
 }
