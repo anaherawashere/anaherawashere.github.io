@@ -18,9 +18,14 @@ body {
   transition-delay: 0.04s;
 }
 
+.blog-preview-list {
+  display: flex;
+  gap: 20px;
+}
+
 .blog-preview {
   background-color: #E3E5E6;
-  width: 250px;
+  width: 400px;
   border-radius: 20px;
   padding: 30px;
 }
