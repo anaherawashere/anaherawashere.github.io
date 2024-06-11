@@ -20,9 +20,16 @@ body {
 
 .blog-preview {
   background-color: #E3E5E6;
-  width: 30vw;
+  width: 250px;
   border-radius: 20px;
   padding: 30px;
+}
+
+.blog-image {
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* widescreen displays */
