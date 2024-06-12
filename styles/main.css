@@ -18,6 +18,8 @@ body {
   --gutter: 72px;
 }
 
+/* TYPOGRAPHY */
+
 h1,
 h2 {
   font-weight: 700;
@@ -48,10 +50,20 @@ h4 {
   font-size: 1.2rem;
 }
 
+h5 {
+  font-weight: 400;
+  color: var(--color-grey);
+  font-size: 1.1rem;
+}
+
 h6 {
   font-size: 0.8rem;
   font-weight: 400;
   color: var(--color-grey);
+}
+
+p.small {
+  font-size: calc(1.1rem * 0.8);
 }
 
 a {
@@ -63,6 +75,8 @@ a:hover,
 a:focus {
   color: var(--color-blue);
 }
+
+/* BUTTONS */
 
 .btn {
   font-size: 1.1rem;
@@ -83,10 +97,6 @@ a:focus {
   color: #fff;
 }
 
-p.small {
-  font-size: calc(1.1rem * 0.8);
-}
-
 .read-more {
   border: none;
   background-color: transparent;
@@ -99,9 +109,11 @@ p.small {
   border-color: var(--color-blue);
 }
 
+/* LAYOUT SPACING */
+
 header {
   width: 100%;
-  padding: 4em 0;
+  padding: 4em 0 3em 0;
 }
 
 .image-grid {
@@ -125,6 +137,14 @@ footer {
   color: #fff;
   border-radius: var(--corners);
 }
+
+.blog__content {
+  width: 100%;
+  height: auto;
+  padding-bottom: 4em;
+}
+
+/* IMAGE GRID */
 
 .image-grid-item_a,
 .image-grid-item_b,
@@ -184,7 +204,8 @@ footer {
   margin: 2.5em 0;
 }
 
-.blog-preview__image {
+.blog-preview__image,
+.blog__image {
   width: 100%;
   height: 300px;
   border-radius: var(--corners);
@@ -192,7 +213,8 @@ footer {
   margin-bottom: 1em;
 }
 
-.blog-preview__image img {
+.blog-preview__image img,
+.blog__image img {
   width: 100%;
   height: 300px;
   object-fit: cover;
@@ -203,7 +225,7 @@ footer {
 }
 
 .footer__title {
-  padding: 0 1em 6em 1em;
+  padding: 0 1em 4em 1em;
   text-align: center;
 }
 
@@ -231,21 +253,46 @@ footer p {
   padding-top: 1em;
 }
 
+/* BLOG */
+
+.subheading__blog {
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+h5.blog__author:before {
+  content: "> ";
+}
+
+h5.blog__date:before {
+  content: "> ";
+}
+
+.blog__content p {
+  margin-bottom: 12px;
+}
+
+.blog__image {
+  margin-bottom: 2em;
+}
+
 /* widescreen displays */
 @media only screen and (min-width: 920px) {
   body {
     margin: 0 72px;
   }
 
-  header {
+  header.home {
     display: flex;
   }
 
-  .header__name {
+  .header__home {
     width: 60%;
   }
 
-  .header__subheading {
+  .subheading__home {
     width: 40%;
   }
 
@@ -262,19 +309,25 @@ footer p {
     gap: 20px;
   }
 
-  .blog-preview__image {
+  .blog-preview__image,
+  .blog__image {
     height: 400px;
   }
 
-  .blog-preview__image img {
+  .blog-preview__image img,
+  .blog__image img {
     height: 400px;
-}
+  }
+
+  .footer__title {
+    padding: 0 1em 6em 1em;
+  }
 }
 
 /* extra-wide widescreen displays */
 @media only screen and (min-width: 1250px) {
   body {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
   }
 }
