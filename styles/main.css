@@ -367,7 +367,7 @@ h5.blog__date:before {
   bottom: 0;
   right: 0;
   z-index: 10;
-  background-color: rgba(255, 0 ,0 ,0.2);
+  background-color: rgba(255, 0, 0, 0.2);
 }
 
 /* widescreen displays */
@@ -427,15 +427,4 @@ h5.blog__date:before {
     max-width: 1100px;
     margin: 0 auto;
   }
-}
-
-/* tablets */
-@media only screen and (max-width: 919px) {
-  .container {
-    /* some layout rules */
-  }
-}
-
-/* phones */
-@media only screen and (max-width: 400px) {
 }
