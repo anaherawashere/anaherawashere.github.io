@@ -76,8 +76,12 @@ a:focus {
   color: var(--color-blue);
 }
 
-.blog__content p {
+.blog__content :is(p, h2) {
   margin-bottom: 12px;
+}
+
+.blog__content h2:not(:first-of-type) {
+  margin: 2em 0 20px 0;
 }
 
 p.example-code {
@@ -246,7 +250,7 @@ nav {
 /* BLOG PREVIEWS */
 
 .blog-preview__card {
-  margin: 2.5em 0;
+  margin-bottom: 2.5em;
 }
 
 .blog-preview__image,
@@ -400,10 +404,11 @@ h5.blog__date:before {
   .blog-preview-list {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
   }
 
   .blog-preview__card {
-    width: 50%;
+    width: calc((100% / 3) - 15px);
   }
 
   .blog-preview__image,
