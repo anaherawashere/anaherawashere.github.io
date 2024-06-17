@@ -111,6 +111,10 @@ h6 {
   color: var(--color-grey);
 }
 
+strong {
+  font-weight: var(--fw-bold);
+}
+
 p.small {
   font-size: calc(1.1rem * 0.8);
 }
