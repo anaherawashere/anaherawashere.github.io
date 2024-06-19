@@ -23,6 +23,8 @@
   --fs-nav: ;
   --fs-button: ;
 
+  --ff-indent: 18px;
+
   @media (min-width: 50em) {
     --fs-300: 0.875rem;
     --fs-400: 1.1rem;
@@ -117,6 +119,10 @@ strong {
 
 p.small {
   font-size: calc(1.1rem * 0.8);
+}
+
+li {
+  margin-left: calc(var(--ff-indent) * 2);
 }
 
 a {
