@@ -117,12 +117,21 @@ strong {
   font-weight: var(--fw-bold);
 }
 
+em {
+  font-style: italic;
+}
+
 p.small {
   font-size: calc(1.1rem * 0.8);
 }
 
 li {
   margin-left: calc(var(--ff-indent) * 2);
+  margin-bottom: 8px;
+}
+
+ol > ul > li {
+  margin-left: calc(var(--ff-indent) * 4);
 }
 
 a {
