@@ -10,7 +10,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet" />
-      <link rel="icon" type="image/x-icon" href="./images/Favicon.png">
+    <link rel="icon" type="image/x-icon" href="./images/Favicon.png" />
   </head>
 
   <body>
@@ -50,90 +50,125 @@
       <div class="image-grid-item_f"></div>
     </div> -->
 
-    <div class="blog-preview">
+    <div class="row__cards">
       <h3>Blog posts</h3>
-      <div class="blog-preview-list">
-        <div class="blog-preview__card">
-          <div class="blog-preview__image">
-            <img
-              src="./images/pexels-hilaryh-green.jpg"
-              alt="sprint 1 image of green leaves with water droplets" />
-          </div>
-          <div class="blog-preview__title">
-            <h6>10 November, 2010</h6>
-            <h4>Te Houtaewa Template</h4>
-            <a class="button read-more" href="./blog/te-houtaewa-template.html"
-              >Read more</a
-            >
-          </div>
-        </div>
-
-        <div class="blog-preview__card">
-          <div class="blog-preview__image">
-            <img
-              src="./images/pexels-digijohan-red.jpg"
-              alt="sprint 2 image of rows of red stadium seats" />
-          </div>
-          <div class="blog-preview__title">
-            <h6>13 June, 2024</h6>
-            <h4>What are the differences between relative, absolute, and fixed positioning?</h4>
-            <a class="button read-more" href="/blog/html-css.html">Read more</a>
-          </div>
-        </div>
-
-        <div class="blog-preview__card">
-          <div class="blog-preview__image">
-            <img
-              src="./images/pexels-enginakyurt-yellow.jpg"
-              alt="close up of yellow knitted pattern" />
-          </div>
-          <div class="blog-preview__title">
-            <h6>4 June, 2024</h6>
-            <h4>Identity, Values and Strengths Exploration</h4>
-            <a class="button read-more" href="/blog/identity-values.html">Read more</a>
-          </div>
-        </div>
-
-        <div class="blog-preview__card">
-          <div class="blog-preview__image">
-            <img
-              src="./images/pexels-matthardy-blue.jpg"
-              alt="close up of moody blue ocean" />
-          </div>
-          <div class="blog-preview__title">
-            <h6>14 June, 2024</h6>
-            <h4>My learning plan</h4>
-            <a class="button read-more" href="/blog/learning-plan.html">Read more</a>
-          </div>
-        </div>
-
-        <div class="blog-preview__card">
-          <div class="blog-preview__image">
-            <img
-              src="./images/pexels-googledeepmind-purplebrain.jpg"
-              alt="modern graphic of a purple brain in a tech scene" />
-          </div>
-          <div class="blog-preview__title">
-            <h6>17 June, 2024</h6>
-            <h4>Emotional Intelligence</h4>
-            <a class="button read-more" href="/blog/emotional-intelligence.html">Read more</a>
-          </div>
-        </div>
-
-        <div class="blog-preview__card">
-          <div class="blog-preview__image">
-            <img
-              src="./images/pexels-mo-eid-bluepink.jpg"
-              alt="graphic pattern of pink stairs with blue shadows" />
-          </div>
-          <div class="blog-preview__title">
-            <h6>19 June, 2024</h6>
-            <h4>What I've learnt about Javascript and the DOM so far...</h4>
-            <a class="button read-more" href="/blog/javascript-dom.html">Read more</a>
-          </div>
-        </div>
-
-      </div>
+      <ul class="cards">
+        <li class="card__list">
+          <a href="/blog/te-houtaewa-template.html" class="card">
+            <div class="blog-preview__card">
+              <div class="blog-preview__image">
+                <img
+                  src="./images/pexels-hilaryh-green.jpg"
+                  alt="sprint 1 image of green leaves with water droplets" />
+              </div>
+              <div class="blog-preview__title">
+                <h6 class="card__date">10 November, 2010</h6>
+                <h4>Te Houtaewa Template</h4>
+                <a
+                  class="button read-more"
+                  href="./blog/te-houtaewa-template.html"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="card__list">
+          <a href="/blog/html-css.html" class="card">
+            <div class="blog-preview__card">
+              <div class="blog-preview__image">
+                <img
+                  src="./images/pexels-digijohan-red.jpg"
+                  alt="sprint 2 image of rows of red stadium seats" />
+              </div>
+              <div class="blog-preview__title">
+                <h6 class="card__date">13 June, 2024</h6>
+                <h4>
+                  What are the differences between relative, absolute, and fixed
+                  positioning?
+                </h4>
+                <a class="button read-more" href="/blog/html-css.html"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="card__list">
+          <a href="/blog/identity-values.html" class="card"
+            ><div class="blog-preview__card">
+              <div class="blog-preview__image">
+                <img
+                  src="./images/pexels-enginakyurt-yellow.jpg"
+                  alt="close up of yellow knitted pattern" />
+              </div>
+              <div class="blog-preview__title">
+                <h6 class="card__date">4 June, 2024</h6>
+                <h4>Identity, Values and Strengths Exploration</h4>
+                <a class="button read-more" href="/blog/identity-values.html"
+                  >Read more</a
+                >
+              </div>
+            </div></a
+          >
+        </li>
+        <li class="card__list">
+          <a href="/blog/learning-plan.html" class="card"
+            ><div class="blog-preview__card">
+              <div class="blog-preview__image">
+                <img
+                  src="./images/pexels-matthardy-blue.jpg"
+                  alt="close up of moody blue ocean" />
+              </div>
+              <div class="blog-preview__title">
+                <h6 class="card__date">14 June, 2024</h6>
+                <h4>My learning plan</h4>
+                <a class="button read-more" href="/blog/learning-plan.html"
+                  >Read more</a
+                >
+              </div>
+            </div></a
+          >
+        </li>
+        <li class="card__list">
+          <a href="/blog/emotional-intelligence.html" class="card"
+            ><div class="blog-preview__card">
+              <div class="blog-preview__image">
+                <img
+                  src="./images/pexels-googledeepmind-purplebrain.jpg"
+                  alt="modern graphic of a purple brain in a tech scene" />
+              </div>
+              <div class="blog-preview__title">
+                <h6 class="card__date">17 June, 2024</h6>
+                <h4>Emotional Intelligence</h4>
+                <a
+                  class="button read-more"
+                  href="/blog/emotional-intelligence.html"
+                  >Read more</a
+                >
+              </div>
+            </div></a
+          >
+        </li>
+        <li class="card__list">
+          <a href="/blog/javascript-dom.html" class="card"
+            ><div class="blog-preview__card">
+              <div class="blog-preview__image">
+                <img
+                  src="./images/pexels-mo-eid-bluepink.jpg"
+                  alt="graphic pattern of pink stairs with blue shadows" />
+              </div>
+              <div class="blog-preview__title">
+                <h6 class="card__date">19 June, 2024</h6>
+                <h4>What I've learnt about Javascript and the DOM so far...</h4>
+                <a class="button read-more" href="/blog/javascript-dom.html"
+                  >Read more</a
+                >
+              </div>
+            </div></a
+          >
+        </li>
+      </ul>
     </div>
 
     <footer>
