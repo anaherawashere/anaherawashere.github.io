@@ -13,44 +13,74 @@
   --fw-regular: 400;
   --fw-bold: 700;
 
-  --fs-300: 0.875rem;
+  --fs-300: 0.8rem;
   --fs-400: 1rem;
   --fs-500: 1.4rem;
   --fs-600: 1.8rem;
-  --fs-700: 2.8rem;
+  --fs-700: 2.2rem;
+  --fs-800: 2.8rem;
 
-  --fs-body: ;
-  --fs-nav: ;
-  --fs-button: ;
+  --fs-body: var(--fs-400);
+  --primary-heading: var(--fs-800);
+  --secondary-heading: var(--fs-700);
+  --fs-nav: var(--fs-300);
+  --fs-button: var(--fs-400);
 
   --ff-indent: 18px;
 
   --row-spacing: 2rem 0;
 
-  @media (min-width: 50em) {
-    --fs-300: 0.875rem;
+  --corners: 20px;
+  --corners-sharp: 4px;
+  --gutter: 72px;
+
+  --shadow-images: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+@media (min-width: 50em) {
+  :root {
     --fs-400: 1.1rem;
-    --fs-700: 4.5rem;
+    --fs-600: 2rem;
+    --fs-700: 3rem;
+    --fs-800: 4.5rem;
 
     --fs-body: ;
     --fs-nav: ;
     --fs-button: ;
   }
-
-  --corners: 20px;
-  --gutter: 72px;
 }
 
+/* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
 * {
   margin: 0;
   padding: 0;
   font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
 }
 
 html,
@@ -69,7 +99,54 @@ body {
   color: var(--color-black);
 }
 
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* UTILITIES */
+
+
+
 /* TYPOGRAPHY */
+
+/* h1 {font-size: var(--fs-800);}
+h2 {font-size: var(--fs-700);}
+h3 {font-size: var(--fs-600);}
+h4 {font-size: var(--fs-500);}
+h5 {font-size: var(--fs-400);}
+h6 {font-size: var(--fs-300);} */
 
 h1,
 h2 {
@@ -78,11 +155,13 @@ h2 {
 }
 
 h1 {
-  font-size: 2.8rem;
+  font-size: var(--fs-800);
 }
 
 h2 {
   font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 h3 {
@@ -322,7 +401,7 @@ nav {
 .blog__image {
   width: 100%;
   height: 300px;
-  border-radius: var(--corners);
+  border-radius: var(--corners-sharp);
   overflow: hidden;
   margin-bottom: 1em;
 }
@@ -425,6 +504,16 @@ footer p {
 
 /* BLOG */
 
+.blog__content-share {
+  text-align: center;
+}
+
+.blog__nav,
+.share-list {
+  list-style-type: none;
+  margin: 0;
+}
+
 .subheading__blog {
   margin-top: 1em;
   display: flex;
@@ -442,6 +531,7 @@ h5.blog__date:before {
 
 .blog__image {
   margin-bottom: 2em;
+  box-shadow: var(--shadow-images);
 }
 
 .code-snippet {
@@ -517,13 +607,8 @@ h5.blog__date:before {
   }
 
   .blog-preview__image,
-  .blog__image {
+  .blog-preview__image img {
     height: 350px;
-  }
-
-  .blog-preview__image img,
-  .blog__image img {
-    height: 400px;
   }
 
   .code-snippet {
@@ -532,6 +617,22 @@ h5.blog__date:before {
 
   .footer__title {
     padding: 0 1em 6em 1em;
+  }
+
+  .blog__image,
+  .blog__image img {
+    height: 450px;
+  }
+
+  .blog__content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2.5rem;
+  }
+
+  .blog__nav {
+    position: sticky;
+    top: 30px;
   }
 }
 
