@@ -46,49 +46,147 @@
           alt="graphic pattern of pink stairs with blue shadows" />
       </div>
       <h2>JavaScript and its relationship to HTML and CSS</h2>
+      <p>Let's imagine a bike.</p>
       <p>
-        Let's imagine a bike.
+        <strong>HTML</strong> is the bike itself - the wheels, the handle bars
+        and the brakes. It's totally functional.
       </p>
       <p>
-        <strong>HTML</strong> is the bike itself - the wheels, the handle bars and the brakes. It's totally functional.
+        <strong>CSS</strong> is the pizzaz! It's the cute basket on the front,
+        the sparkley tassles on the handle bars and the firey red paint (I know
+        red makes you go faster, but in this situation it's purely cosmetic).
       </p>
       <p>
-        <strong>CSS</strong> is the pizzaz! It's the cute basket on the front, the sparkley tassles on the handle bars and the firey red paint (I know red makes you go faster, but in this situation it's purely cosmetic).
+        <strong>Javascript</strong> is the electrics, because this is no old
+        fashioned bike - it's an e-bike! When you pedal, the motor makes you go
+        faster. Just push a button and magic stuff happens without you having to
+        put in a whole lot of work.
       </p>
       <p>
-        <strong>Javascript</strong> is the electrics, because this is no old fashioned bike - it's an e-bike! When you pedal, the motor makes you go faster. Just push a button and magic stuff happens without you having to put in a whole lot of work.
+        Javascript allows you to make your website more interactive and adds
+        actions and changes to a page without having to refresh. For example, it
+        could be an accordian open up to reveal text at just the click of a
+        button.
       </p>
-      <p>Javascript adds actions and changes to a page without having to refresh.</p>
       <h2>Control Flow and Loops</h2>
       <p>
-        By default, Javascript code is executed top to bottom, line by line - similar to CSS. <strong>Control Flow</strong> allows us to control the order of execution.
-      </p>
-      <p>
-        <strong>Loops</strong> allow us to control the flow of execution, repeating tasks when a criteria is met. Loops also help us write repetitive tasks with less code.
+        By default, Javascript code is executed top to bottom, line by line -
+        similar to CSS. <strong>Control Flow</strong> allows us to control the
+        order of execution. <strong>Loops</strong> are one way to control the
+        flow of execution by repeating tasks when a criteria is met and are
+        written efficiently with less code.
       </p>
       <p><strong>Example:</strong></p>
-      <p>Imagine you have 5 plants to water. You need to repeat the action of watering each plant until you've watered all 5. Here's how a loop fits into this scenario:</p>
+      <p>
+        Imagine you have 5 plants to water. You need to repeat the action of
+        watering each plant until you've watered all 5. Here's how a loop fits
+        into this scenario:
+      </p>
       <ol>
         <li><strong>Start: </strong>Start at the first plant.</li>
-        <li><strong>Condition check: </strong>Check if there are more plants to water.</li>
+        <li>
+          <strong>Condition check: </strong>Check if there are more plants to
+          water.
+        </li>
         <ul>
           <li>If yes, proceed to water the next plant.</li>
           <li>If no, stop.</li>
         </ul>
         <li><strong>Water the plant: </strong>Water the current plant.</li>
-        <li><strong>Continue to the next plant:</strong> Move on to the next plant.</li>
-        <li><strong>Repeat: </strong>Go back to the condition check and repeat the process.</li>
+        <li>
+          <strong>Continue to the next plant:</strong> Move on to the next
+          plant.
+        </li>
+        <li>
+          <strong>Repeat: </strong>Go back to the condition check and repeat the
+          process.
+        </li>
       </ol>
-      <p>The loop will continue until there are no plants left to water.</p>
+      <p>
+        The loop will continue until there are no plants left to water. And then
+        control flow would mean we continue with the next code.
+      </p>
+      <p>
+        <strong
+          >Here is an example of what this would look like written in
+          code:</strong
+        >
+      </p>
+      <img
+        class="code-snippet"
+        src="/images/code-snippets/sprint-3-controlflow.png"
+        alt="" />
       <h2>The DOM</h2>
       <p>
-        The DOM (Document Object Model) allows you to interact with and manipulate HTML and CSS using Javascript.
+        The DOM (Document Object Model) allows us to interact with and
+        manipulate HTML and CSS using Javascript.
       </p>
-      <p>You can select elements on a page and </p>
+      <p>
+        The DOM is an object that represents an HTML document. The browser keeps
+        the HTML and DOM in sync - when the DOM updates, the HTML does too, and
+        vice versa. And within the DOM, each HTML element is represented as a
+        sub-object.
+      </p>
+      <p>
+        The DOM has a slightly different interface to what we're used to with
+        HTML. The DOM takes the HTML and formats it into a tree structure.
+      </p>
+      <p>
+        With the DOM, you can select objects (or HTML elements) on a page, use
+        methods to listen for events relating to that object, or add properties
+        to the element, like change it's background colour or another CSS
+        property.
+      </p>
+      <p><strong>Example</strong></p>
+      <p>
+        The following example selects the elements, defines a function that
+        changes the text of the paragraph and thn adds an event listener to the
+        button that calls the the changeText function when clicked.
+      </p>
+      <img
+        class="code-snippet"
+        src="/images/code-snippets/sprint-3-thedom.png"
+        alt="" />
       <h2>The difference between accessing data from arrays and objects</h2>
-      <p></p>
+      <p>
+        Arrays and objects are both data structures that you can choose from
+        depending on the situation.
+      </p>
+      <p>
+        <strong>Arrays</strong> are a group of indexed items that you can call
+        on using their position in the group using "array[index]". You would
+        usually use arrays for items where the order matters e.g. lists,
+        timelines, series of numbers, group of names, etc.
+      </p>
+      <p>
+        <strong>Objects</strong> can be used to store data that can be
+        identified by a name rather than position and you can call them using
+        "object.key" or "object[key]".Objects are best for collections of
+        key-value pairs such as contact information, product info, words and
+        their definitions, etc.
+      </p>
+      <p><strong>What the heck does "key-value pair" mean?</strong></p>
+      <ul>
+        <li>
+          The term "key-value pair" is used to desribe a set of two linked data
+          items. e.g. Age: 30;
+        </li>
+        <li>'Age' would be the key</li>
+        <li>'30' would be the value</li>
+        <li>
+          When you want to know the number of years, you look up 'Age' and find
+          it's value.
+        </li>
+      </ul>
       <h2>Functions</h2>
-      <p></p>
+      <p>
+        Functions are code that perform specific tasks. A function performs when
+        it is called, such as clicking a button, or as part of the default
+        control flow.
+      </p>
+      <p>
+        
+      </p>
     </div>
 
     <footer>
