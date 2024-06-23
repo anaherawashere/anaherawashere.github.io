@@ -675,6 +675,13 @@ strong {
 .padding-block-800 {
   padding-block: var(--size-800);
 }
+
+@media (max-width: 50em) {
+  .padding-block-800 {
+    padding-block: var(--size-600);
+  }
+}
+
 .add-flow {
   margin-top: var(--flow-spacer, var(--flow-margin));
 }
@@ -731,12 +738,13 @@ strong {
 
 .blog__content {
   display: grid;
-  gap: 6rem;
+  gap: 3rem;
 }
 
 @media (min-width: 50em) {
   .blog__content {
     grid-template-columns: 3fr 1fr;
+    gap: 6rem;
   }
 }
 
@@ -751,6 +759,13 @@ strong {
 
 :where(.blog-body > .fs-600:not(:first-of-type)) {
   margin-top: var(--size-900);
+}
+
+@media (max-width: 50em) {
+  :where(.blog-body > .fs-600:not(:first-of-type)) {
+    margin-top: var(--size-700);
+  }
+
 }
 
 .left-border-line {
