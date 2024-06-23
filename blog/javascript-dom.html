@@ -10,251 +10,370 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="./images/Favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
   </head>
 
   <body>
-    <nav>
-      <div class="nav__logo">
-        <a href="/index.html"
-          ><img src="/images/quotation-marks-open.png" alt="logo"
-        /></a>
-      </div>
-      <div class="nav__links">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/index.html#blog-posts">Blog Posts</a></li>
-          <li><a href="#">Dolor</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <header class="blog">
-      <div class="header__blog">
-        <h1>What I've learnt about Javascript and the DOM so far...</h1>
-      </div>
-      <div class="subheading__blog">
-        <h5 class="blog__author">Anahera</h5>
-        <h5 class="blog__date">19 June, 2024</h5>
+    <header class="primary-header | bg-primarySuperLight">
+      <div class="container" style="--maxwidth: 100%">
+        <div class="flex ai--c jc--sb">
+          <a aria-label="logo" href="/index.html">
+            <svg class="header-logo" width="60px" height="60px">
+              <use xlink:href="/images/logo.svg#logo"></use>
+            </svg>
+          </a>
+          <button
+            class="mobile-nav-toggle"
+            aria-controls="primary-navigation"
+            aria-expanded="false">
+            <svg class="nav-icon icon-close" aria-hidden="true">
+              <use xlink:href="/images/nav-icons.svg#icon-close"></use>
+            </svg>
+            <svg class="nav-icon icon-hamburger" aria-hidden="true">
+              <use xlink:href="/images/nav-icons.svg#icon-hamburger"></use>
+            </svg>
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <nav class="primary-navigation" id="primary-navigation">
+            <ul aria-label="Primary" role="list" class="nav-list flex">
+              <li><a href="/index.html#blog-posts">Blog</a></li>
+              <li><a href="#">✨ Surprise ✨</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="button button--primary | mbl--hide">
+            I'm a button
+          </button>
+        </div>
       </div>
     </header>
 
-    <div class="blog__image">
-      <img
-          src="/images/pexels-mo-eid-bluepink.jpg"
-          alt="graphic pattern of pink stairs with blue shadows" />
-    </div>
-
-    <div class="blog__content">
-
-      <div class="blog__content-nav">
-        <ul class="blog__nav">
-          <li class="blog__nav-item">JavaScript and its relationship to HTML and CSS</li>
-          <li class="blog__nav-item">Control Flow and Loops</li>
-          <li class="blog__nav-item">The DOM</li>
-          <li class="blog__nav-item">The difference between accessing data from arrays and objects</li>
-          <li class="blog__nav-item">Functions</li>
-        </ul>
-      </div>
-
-      <div class="blog__content-body">
-        <h2>JavaScript and its relationship to HTML and CSS</h2>
-        <p>
-          If HTML is the structure and CSS the styling of a website, Javascript
-          adds interactivity and dynamic functionality.
-        </p>
-        <p>
-          Javascript allows you to add interactive actions to a page without
-          having to refresh. For example, at the click of a button, an accordion
-          could open up to reveal text.
-        </p>
-        <p><strong>Example</strong></p>
-        <p>Let's imagine a bike.</p>
-        <p>
-          <strong>HTML</strong> is the humble bicycle - the wheels, the handlebars and the brakes. It's totally functional.
-        </p>
-        <p>
-          <strong>CSS</strong> is the pizzaz! It's the cute basket on the front,
-          the sparkly tassels on the handle bars and the fiery red paint (I know
-          red makes you go faster, but in this situation it's purely cosmetic).
-        </p>
-        <p>
-          <strong>Javascript</strong> is the electrics, because this is no old
-          fashioned bike - it's an e-bike! When you pedal, the motor makes you go
-          faster. Just push a button and magic stuff happens without you having to
-          put in a whole lot of work.
-        </p>
-        <iframe
-          src="https://giphy.com/embed/ftvphb1LgYP9SgoNGn"
-          width="300"
-          height="300"
-          style=""
-          frameborder="0"
-          class="giphy-embed"
-          allowfullscreen></iframe>
-        <p>
-          <a
-            href="https://giphy.com/gifs/workingtitlefilms-mr-bean-rowan-atkinson-beans-holiday-ftvphb1LgYP9SgoNGn"
-            >via GIPHY</a
-          >
-        </p>
-        <h2>Control Flow and Loops</h2>
-        <p>
-          By default, Javascript code is executed top to bottom, line by line -
-          similar to CSS. <strong>Control Flow</strong> allows us to control the
-          order of execution. <strong>Loops</strong> are one way to control the
-          flow of execution by repeating tasks when a criterion is met and doing those tasks with less code!
-        </p>
-        <p><strong>Example:</strong></p>
-        <p>
-          Imagine you have 5 plants to water. You need to repeat the action of
-          watering each plant until you've watered all 5. Here's how a loop fits
-          into this scenario:
-        </p>
-        <ol>
-          <li><strong>Start: </strong>Start at the first plant.</li>
-          <li>
-            <strong>Condition check: </strong>Check if there are more plants to
-            water.
-          </li>
-          <ul>
-            <li>If yes, proceed to water the next plant.</li>
-            <li>If no, stop.</li>
-          </ul>
-          <li><strong>Water the plant: </strong>Water the current plant.</li>
-          <li>
-            <strong>Continue to the next plant:</strong> Move on to the next
-            plant.
-          </li>
-          <li>
-            <strong>Repeat: </strong>Go back to the condition check and repeat the
-            process.
-          </li>
-        </ol>
-        <p>
-          The loop will continue until there are no plants left to water. Once the loop is done, then control flow would mean we continue with the next code.
-        </p>
-        <p>
-          <strong
-            >Here is an example of what this would look like written the DOM using Javascript:</strong
-          >
-        </p>
-        <img
-          class="code-snippet"
-          src="/images/code-snippets/sprint-3-controlflow.png"
-          alt="" />
-        <h2>The DOM</h2>
-        <p>
-          The DOM (Document Object Model) allows us to interact with and
-          manipulate HTML and CSS using Javascript.
-        </p>
-        <p>
-          The DOM is like an interactive version of an HTML document. Our browsers use the DOM to show what's on the webpage, so when you make changes to the DOM, the page updates instantly. Despite those changes, the original HTML file will stay the same unless you manually change and reload it.
-        </p>
-        
-        <div class="blog__example">
-          <p>To use an analogy, imagine two bedrooms with identical furniture - the same bed, drawers, bedside tables, lamps and a mirror. One bedroom is the HTML, representing the initial set up and structure. The second is the DOM bedroom, a live and interactive version.</p>
-          <p>The DOM bedroom lets you move furniture around, repaint the walls, or add new decorations when you want. You'll see all of your changes instantly just as it works to the DOM webpage without needing to reload it.</p>
-          <p>While no changes are made to the HTML bedroom and it stays the same, unaffected by the DOM.</p>
+    <main>
+      <section>
+        <div class="container">
+          <div class="padding-block-800 row-small">
+            <div class="fs-750 fw-semibold">
+              <h2 class="blog-section">
+                What I've learnt about Javascript and the DOM so far...
+              </h2>
+            </div>
+            <div class="flex">
+              <h5 class="fs-300 fw-semibold">Anahera</h5>
+              <h5 class="fs-300 fw-semibold">19 June, 2024</h5>
+            </div>
+          </div>
         </div>
-        <p>
-          The DOM has a slightly different interface from what we're used to with
-          HTML. The DOM takes the HTML and formats it into a tree structure. And all the HTML elements that exist can be selected as objects in the DOM.
-        </p>
-        <p>
-          With the DOM, you can select objects (like paragraph text) on a page, use
-          methods to listen for events (like clicks) relating to that object, or add properties
-          to the element (like change its background colour).
-        </p>
-        <p><strong>Example</strong></p>
-        <p>
-          The following example selects the elements, defines a function that
-          changes the text of the paragraph and thn adds an event listener to the
-          button that calls the the changeText function when clicked.
-        </p>
-        <img
-          class="code-snippet"
-          src="/images/code-snippets/sprint-3-thedom.png"
-          alt="" />
-        <h2>The difference between accessing data from arrays and objects</h2>
-        <p>
-          Arrays and objects are both data structures that you can choose from
-          depending on the situation.
-        </p>
-        <p>
-          <strong>Arrays</strong> are a group of indexed items that you can call
-          on using their position in the group using "array[index]". You would
-          usually use arrays for items where the order matters e.g. lists,
-          timelines, series of numbers, group of names, etc.
-        </p>
-        <p>
-          <strong>Objects</strong> can be used to store data that can be
-          identified by a name rather than position and you can call them using
-          "object.key" or "object[key]".Objects are best for collections of
-          key-value pairs such as contact information, product info, words and
-          their definitions, etc.
-        </p>
-        <p>
-          An key difference between the two is the importance of indexing the
-          positions, arrays do this and objects do not.
-        </p>
-        <p><strong>What the heck does "key-value pair" mean?</strong></p>
-        <ul>
-          <li>
-            The term "key-value pair" is used to desribe a set of two linked data
-            items. e.g. Age: 30;
-          </li>
-          <li>'Age' would be the key</li>
-          <li>'30' would be the value</li>
-          <li>
-            When you want to know the number of years, you look up 'Age' and find
-            its value.
-          </li>
-        </ul>
-        <h2>Functions</h2>
-        <p>
-          Functions are code that perform specific tasks. A function performs when
-          it is called, such as clicking a button, or as part of the default
-          control flow.
-        </p>
-        <p>
-          What's great about them is that they are <strong>reusable</strong> and
-          you can call on them whenever you like and without having to rewrite the
-          same code.
-        </p>
-      </div>
+      </section>
 
-      <div class="blog__content-share">
-        <h6>Share</h6>
+      <section>
+        <div class="container">
+          <div class="blog__image">
+            <img
+              src="/images/pexels-pixabay-lightblue.jpg"
+              alt="close up of clear blue pool water with light ripples" />
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="blog__content | row-small padding-block-800">
+          <div class="blog-body">
+            <h3 class="blog-section | fs-600">
+              JavaScript and its relationship to HTML and CSS
+            </h3>
+            <p>
+              If HTML is the structure and CSS the styling of a website,
+              Javascript adds interactivity and dynamic functionality.
+            </p>
+            <p>
+              Javascript allows you to add interactive actions to a page without
+              having to refresh. For example, at the click of a button, an
+              accordion could open up to reveal text.
+            </p>
+            <div class="left-border-line">
+              <p>Let's imagine a bike.</p>
+              <p>
+                <strong>HTML</strong> is the humble bicycle - the wheels, the
+                handlebars and the brakes. It's totally functional.
+              </p>
+              <p>
+                <strong>CSS</strong> is the pizzaz! It's the cute basket on the
+                front, the sparkly tassels on the handle bars and the fiery red
+                paint (I know red makes you go faster, but in this situation
+                it's purely cosmetic).
+              </p>
+              <p>
+                <strong>Javascript</strong> is the electrics, because this is no
+                old fashioned bike - it's an e-bike! When you pedal, the motor
+                makes you go faster. Just push a button and magic stuff happens
+                without you having to put in a whole lot of work.
+              </p>
+            </div>
+            <iframe
+              src="https://giphy.com/embed/ftvphb1LgYP9SgoNGn"
+              width="300"
+              height="300"
+              style=""
+              frameborder="0"
+              class="giphy-embed"
+              allowfullscreen></iframe>
+            <p>
+              <a
+                href="https://giphy.com/gifs/workingtitlefilms-mr-bean-rowan-atkinson-beans-holiday-ftvphb1LgYP9SgoNGn"
+                >via GIPHY</a
+              >
+            </p>
+            <h3 class="blog-section | fs-600">Control Flow and Loops</h3>
+            <p>
+              By default, Javascript code is executed top to bottom, line by
+              line - similar to CSS. <strong>Control Flow</strong> allows us to
+              control the order of execution. <strong>Loops</strong> are one way
+              to control the flow of execution by repeating tasks when a
+              criterion is met and doing those tasks with less code!
+            </p>
+            <div class="left-border-line">
+              <p>
+                Imagine you have 5 plants to water. You need to repeat the
+                action of watering each plant until you've watered all 5. Here's
+                how a loop fits into this scenario:
+              </p>
+              <ol>
+                <li><strong>Start: </strong>Start at the first plant.</li>
+                <li>
+                  <strong>Condition check: </strong>Check if there are more
+                  plants to water.
+                </li>
                 <ul>
-                  <li class="share-list"><a href="#">#</a></li>
-                  <li class="share-list"><a href="#">#</a></li>
-                  <li class="share-list"><a href="#">#</a></li>
-                  <li class="share-list"><a href="#">#</a></li>
+                  <li>If yes, proceed to water the next plant.</li>
+                  <li>If no, stop.</li>
                 </ul>
-              </div>
+                <li>
+                  <strong>Water the plant: </strong>Water the current plant.
+                </li>
+                <li>
+                  <strong>Continue to the next plant:</strong> Move on to the
+                  next plant.
+                </li>
+                <li>
+                  <strong>Repeat: </strong>Go back to the condition check and
+                  repeat the process.
+                </li>
+              </ol>
+              <p>
+                The loop will continue until there are no plants left to water.
+                Once the loop is done, then control flow would mean we continue
+                with the next code.
+              </p>
+            </div>
+            <p>
+              <strong
+                >Here is an example of what this would look like written the DOM
+                using Javascript:</strong
+              >
+            </p>
+            <img
+              class="code-snippet"
+              src="/images/code-snippets/sprint-3-controlflow.png"
+              alt="" />
+            <h3 class="blog-section | fs-600">The DOM</h3>
+            <p>
+              The DOM (Document Object Model) allows us to interact with and
+              manipulate HTML and CSS using Javascript.
+            </p>
+            <p>
+              The DOM is like an interactive version of an HTML document. Our
+              browsers use the DOM to show what's on the webpage, so when you
+              make changes to the DOM, the page updates instantly. Despite those
+              changes, the original HTML file will stay the same unless you
+              manually change and reload it.
+            </p>
 
-    </div>
+            <div class="left-border-line">
+              <p>
+                To use an analogy, imagine two bedrooms with identical furniture
+                - the same bed, drawers, bedside tables, lamps and a mirror. One
+                bedroom is the HTML, representing the initial set up and
+                structure. The second is the DOM bedroom, a live and interactive
+                version.
+              </p>
+              <p>
+                The DOM bedroom lets you move furniture around, repaint the
+                walls, or add new decorations when you want. You'll see all of
+                your changes instantly just as it works to the DOM webpage
+                without needing to reload it.
+              </p>
+              <p>
+                While no changes are made to the HTML bedroom and it stays the
+                same, unaffected by the DOM.
+              </p>
+            </div>
+            <p>
+              The DOM has a slightly different interface from what we're used to
+              with HTML. The DOM takes the HTML and formats it into a tree
+              structure. And all the HTML elements that exist can be selected as
+              objects in the DOM.
+            </p>
+            <p>
+              With the DOM, you can select objects (like paragraph text) on a
+              page, use methods to listen for events (like clicks) relating to
+              that object, or add properties to the element (like change its
+              background colour).
+            </p>
+            <h4 class="fs-500">Example</h4>
+            <p>
+              The following example selects the elements, defines a function
+              that changes the text of the paragraph and thn adds an event
+              listener to the button that calls the the changeText function when
+              clicked.
+            </p>
+            <img
+              class="code-snippet"
+              src="/images/code-snippets/sprint-3-thedom.png"
+              alt="" />
+            <h3 class="blog-section | fs-600">
+              The difference between accessing data from arrays and objects
+            </h3>
+            <p>
+              Arrays and objects are both data structures that you can choose
+              from depending on the situation.
+            </p>
+            <p>
+              <strong>Arrays</strong> are a group of indexed items that you can
+              call on using their position in the group using "array[index]".
+              You would usually use arrays for items where the order matters
+              e.g. lists, timelines, series of numbers, group of names, etc.
+            </p>
+            <p>
+              <strong>Objects</strong> can be used to store data that can be
+              identified by a name rather than position and you can call them
+              using "object.key" or "object[key]".Objects are best for
+              collections of key-value pairs such as contact information,
+              product info, words and their definitions, etc.
+            </p>
+            <p>
+              An key difference between the two is the importance of indexing
+              the positions, arrays do this and objects do not.
+            </p>
+            <p><strong>What the heck does "key-value pair" mean?</strong></p>
+            <ul>
+              <li>
+                The term "key-value pair" is used to desribe a set of two linked
+                data items. e.g. Age: 30;
+              </li>
+              <li>'Age' would be the key</li>
+              <li>'30' would be the value</li>
+              <li>
+                When you want to know the number of years, you look up 'Age' and
+                find its value.
+              </li>
+            </ul>
+            <h3 class="blog-section | fs-600">Functions</h3>
+            <p>
+              Functions are code that perform specific tasks. A function
+              performs when it is called, such as clicking a button, or as part
+              of the default control flow.
+            </p>
+            <p>
+              What's great about them is that they are
+              <strong>reusable</strong> and you can call on them whenever you
+              like and without having to rewrite the same code.
+            </p>
+          </div>
 
-    <footer>
-      <div class="footer__decoration">
-        <img
-          src="/images/quotation-marks-closed.png"
-          alt="closed quotation logo" />
-      </div>
-      <div class="footer__title">
-        <h1 id="footer-heading">This is a footer.</h1>
-        <a class="btn btn-inverted" href="#">And I am a button</a>
-      </div>
-      <div class="footer__links">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="#">Lorem</a></li>
-          <li><a href="#">Ipsum</a></li>
-          <li><a href="#">Dolor</a></li>
-        </ul>
-        <p class="footer small">© 2024 anaherawashere</p>
+          <div class="blog__content-nav move-ontop">
+            <ul
+              class="blog__nav | sticky | fs-300 fw-semibold left-border-line"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta | bg-primaryDark text-white padding-block-800">
+        <div class="container">
+          <div class="even-columns vertical-align-center">
+            <div>
+              <p class="fs-secondary-heading fw-bold left-mb-center">
+                Some kinda call to action copy goes here.
+              </p>
+            </div>
+            <div class="justify-self-end">
+              <button class="button button--inverted">I'm a button</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="primary-footer | bg-black text-primaryLighter padding-block-800">
+      <div class="container">
+        <div class="even-columns">
+          <div class="footer__logo">
+            <a href="#">
+              <svg class="footer-logo" width="60px" height="60px">
+                <use xlink:href="/images/logo.svg#logo"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer__socials">
+            <ul class="social-list" role="list" aria-label="Social links">
+              <li>
+                <a aria-label="instagram" href="#"
+                  ><svg class="social-icon">
+                    <use
+                      xlink:href="/images/social-icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="linkedin" href="#"
+                  ><svg class="social-icon">
+                    <use
+                      xlink:href="/images/social-icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__nav">
+            <nav class="footer-nav">
+              <ul
+                class="flow"
+                style="--flow-spacer: 0.75em"
+                aria-label="Footer"
+                role="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog Posts</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Ipsum</a></li>
+                <li><a href="#">Dolor</a></li>
+                <li><a href="#">Sit</a></li>
+                <li><a href="#">Amet</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__form">
+            <form action="">
+              <input
+                class="fs-300"
+                id="email"
+                type="email"
+                name="email"
+                placeholder="hello@email.com" />
+              <button class="button button--primary">Go</button>
+            </form>
+          </div>
+
+          <div class="footer__disclaimer">
+            <p class="fs-300">© 2024 anaherawashere</p>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

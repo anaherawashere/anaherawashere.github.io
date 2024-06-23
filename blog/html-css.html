@@ -10,129 +10,288 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet" />
-      <link rel="icon" type="image/x-icon" href="./images/Favicon.png">
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
   </head>
 
   <body>
-    <nav>
-      <div class="nav__logo">
-        <a href="/index.html"><img src="/images/quotation-marks-open.png" alt="logo"></a>
-      </div>
-      <div class="nav__links">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/index.html#blog-posts">Blog Posts</a></li>
-          <li><a href="#">Dolor</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <header class="blog">
-      <div class="header__blog">
-        <h1>What are the differences between relative, absolute, and fixed positioning?</h1>
-      </div>
-      <div class="subheading__blog">
-        <h5 class="blog__author">Anahera</h5>
-        <h5 class="blog__date">13 June, 2024</h5>
+    <header class="primary-header | bg-primarySuperLight">
+      <div class="container" style="--maxwidth: 100%">
+        <div class="flex ai--c jc--sb">
+          <a aria-label="logo" href="/index.html">
+            <svg class="header-logo" width="60px" height="60px">
+              <use xlink:href="/images/logo.svg#logo"></use>
+            </svg>
+          </a>
+          <button
+            class="mobile-nav-toggle"
+            aria-controls="primary-navigation"
+            aria-expanded="false">
+            <svg class="nav-icon icon-close" aria-hidden="true">
+              <use xlink:href="/images/nav-icons.svg#icon-close"></use>
+            </svg>
+            <svg class="nav-icon icon-hamburger" aria-hidden="true">
+              <use xlink:href="/images/nav-icons.svg#icon-hamburger"></use>
+            </svg>
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <nav class="primary-navigation" id="primary-navigation">
+            <ul aria-label="Primary" role="list" class="nav-list flex">
+              <li><a href="/index.html#blog-posts">Blog</a></li>
+              <li><a href="#">✨ Surprise ✨</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="button button--primary | mbl--hide">
+            I'm a button
+          </button>
+        </div>
       </div>
     </header>
 
-    <div class="blog__content">
-      <div class="blog__image">
-        <img
-          src="/images/pexels-digijohan-red.jpg"
-          alt="sprint 2 image of rows of red stadium seats" />
-      </div>
-      <p>
-        <strong>Positioning allows you to control the layout and placement of elements on a page.
-        </strong>
-      </p>
-      <p>
-        <strong>Relative</strong>
-        - Moves an element relative to its original position and keeps it in the page flow.
-      </p>
-      <p>To put it simply, adding a position of relative will keep the element in the same position and will move around based on this starting point. When you add properties like top or bottom, you will move the element from it's original position.</p>
-      
-      <div class="blog__example">
-        <h4>Example:</h4>
-        <br>
-        <p class="example-code">div.relative {</p>
-          <p class="example-code left-indent">position: relative;</p>
-          <p class="example-code left-indent">border: 3px solid #FF0000;</p>
-          <p class="example-code">}</p>
-          <br>
-        <div class="blog-position example-relative"><p>Relative</p></div>
-      </div>
-
-      <br>
-      <p>
-        <strong>Absolute</strong>
-        - Positions an element relative to its nearest positioned ancestor and removes it from the document flow.
-      </p>
-      <p>This property first removes the element from it's orginal spot on the page, and will be moved based on an ancestor element that has a position value other than static.
-      </p>
-      <p>The below example shows how the Absolute box is positioned in realtion to the ancestor, the Absolute box.</p>
-      <p>Another example is the closed quotation mark in the footer. It's nearest ancestor with a position property is the footer container, so it has been moved around in relation to the footer container.</p>
-      
-      <div class="blog__example">
-        <h4>Example:</h4>
-        <br>
-        <p class="example-code">div.absolute {</p>
-          <p class="example-code left-indent">position: absolute;</p>
-          <p class="example-code left-indent">bottom: 0;</p>
-          <p class="example-code left-indent">right: 0;</p>
-          <p class="example-code left-indent">border: 3px solid #FF0000;</p>
-          <p class="example-code">}</p>
-          <br>
-        <div class="blog-position example-relative">
-          <p>Relative</p>
-          <div class="blog-position example-absolute"><p>Absolute</p></div>
+    <main>
+      <section>
+        <div class="container">
+          <div class="padding-block-800 row-small">
+            <div class="fs-750 fw-semibold">
+              <h2 class="blog-section">
+                What are the differences between relative, absolute, and fixed
+                positioning?
+              </h2>
+            </div>
+            <div class="flex">
+              <h5 class="fs-300 fw-semibold">Anahera</h5>
+              <h5 class="fs-300 fw-semibold">13 June, 2024</h5>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <br>
-      <p><strong>Fixed</strong>
-        - Positions an element relative to the viewport, keeping it in place during scrolling, and removes it from the document flow.
-      </p>
-      <p>Again, this position removes the element from it's original spot on the page, and any movement will be in relation to the viewport/screen. So "top: 10px" would move the element 10px down from the top of your screen.</p>
-      <p>Use cases for position: fixed culd be keeping your navigation bar at the top of the page.</p>
-
-      <div class="blog__example">
-        <h4>Example:</h4>
-        <br>
-        <p class="example-code">div.fixed {</p>
-          <p class="example-code left-indent">position: fixed;</p>
-          <p class="example-code left-indent">bottom: 0;</p>
-          <p class="example-code left-indent">right: 0;</p>
-          <p class="example-code left-indent">border: 3px solid #FF0000;</p>
-          <p class="example-code">}</p>
-          <br>
-          <p><em>The fixed element is in the lower right of the page.</em></p>
-        <div class="blog-position example-fixed"><p>Fixed</p></div>
-      </div>
-      <br>
-      <p>And that's it! Hope it all made sense.</p>
-    </div>
-
-    <footer>
-      <div class="footer__title">
-        <div class="footer__decoration">
-          <img
-            src="/images/quotation-marks-closed.png"
-            alt="closed quotation logo" />
+      <section>
+        <div class="container">
+          <div class="blog__image">
+            <img
+              src="/images/pexels-digijohan-red.jpg"
+              alt="rows and rows of red stadium seats" />
+          </div>
         </div>
-        <h1 id="footer-heading">This is a footer.</h1>
-        <a class="btn btn-inverted" href="#">And I am a button</a>
-      </div>
-      <div class="footer__links">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="#">Lorem</a></li>
-          <li><a href="#">Ipsum</a></li>
-          <li><a href="#">Dolor</a></li>
-        </ul>
-        <p class="footer small">© 2024 anaherawashere</p>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="blog__content | row-small padding-block-800">
+            <div class="blog-body">
+              <p class="fw-semibold fs-400">Positioning allows you to control the layout and placement of
+                  elements on a page.
+              </p>
+              <p class="blog-section | fs-600">
+                Relative
+              </p>
+              <p>
+                Moves an element relative to its original position and keeps
+                it in the page flow.
+              </p>
+              <p>
+                To put it simply, adding a position of relative will keep the
+                element in the same position and will move around based on this
+                starting point. When you add properties like top or bottom, you
+                will move the element from it's original position.
+              </p>
+
+              <div class="left-border-line">
+                <ul>
+                  <li>div.relative {</li>
+                  <ul>
+                    <li>position: relative;</li>
+                    <li>top: 0;</li>
+                    <li>left: 0;</li>
+                  </ul>
+                  <li>}</li>
+                </ul>
+                <div class="eg-ancestor | fs-500">
+                  Ancestor
+                  <div class="eg-relative">
+                    Relative
+                  </div>
+                </div>
+              </div>
+
+              <p class="blog-section | fs-600">Absolute</p>
+              <p>
+                Positions an element relative to its nearest positioned
+                ancestor and removes it from the document flow.
+              </p>
+              <p>
+                This property first removes the element from it's orginal spot
+                on the page, and will be moved based on an ancestor element that
+                has a position value other than static.
+              </p>
+              <p>
+                The below example shows how the Absolute box is positioned in
+                realtion to the ancestor, the Absolute box.
+              </p>
+              <p>
+                Another example is the closed quotation mark in the footer. It's
+                nearest ancestor with a position property is the footer
+                container, so it has been moved around in relation to the footer
+                container.
+              </p>
+
+              <div class="left-border-line">
+                <ul>
+                  <li>div.absolute {</li>
+                  <ul>
+                    <li>position: absolute;</li>
+                    <li>top: 0;</li>
+                    <li>right: 0;</li>
+                  </ul>
+                  <li>}</li>
+                </ul>
+                <div class="eg-ancestor | fs-500">
+                  Ancestor
+                  <div class="eg-relative">
+                    Relative
+                  </div>
+                  <div class="eg-absolute">
+                    Absolute
+                  </div>
+                </div>
+              </div>
+
+              <p class="blog-section | fs-600">Fixed</p>
+              <p>
+                Positions an element relative to the viewport, keeping it in
+                place during scrolling, and removes it from the document flow.
+              </p>
+              <p>
+                Again, this position removes the element from it's original spot
+                on the page, and any movement will be in relation to the
+                viewport/screen. So "top: 10px" would move the element 10px down
+                from the top of your screen.
+              </p>
+              <p>
+                Use cases for position: fixed culd be keeping your navigation
+                bar at the top of the page.
+              </p>
+
+              <div class="left-border-line">
+                <ul>
+                  <li>div.fixed {</li>
+                  <ul>
+                    <li>position: fixed;</li>
+                    <li>bottom: 0;</li>
+                    <li>right: 0;</li>
+                  </ul>
+                  <li>}</li>
+                </ul>
+                <div class="eg-ancestor | fs-500">
+                  Ancestor
+                  <div class="eg-relative">
+                    Relative
+                  </div>
+                  <div class="eg-absolute">
+                    Absolute
+                  </div>
+                  <div class="eg-fixed">
+                    Fixed
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="blog__content-nav move-ontop">
+              <ul
+                class="blog__nav | sticky | fs-300 fw-semibold left-border-line"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta | bg-primaryDark text-white padding-block-800">
+        <div class="container">
+          <div class="even-columns vertical-align-center">
+            <div>
+              <p class="fs-secondary-heading fw-bold left-mb-center">
+                Some kinda call to action copy goes here.
+              </p>
+            </div>
+            <div class="justify-self-end">
+              <button class="button button--inverted">I'm a button</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="primary-footer | bg-black text-primaryLighter padding-block-800">
+      <div class="container">
+        <div class="even-columns">
+          <div class="footer__logo">
+            <a href="#">
+              <svg class="footer-logo" width="60px" height="60px">
+                <use xlink:href="/images/logo.svg#logo"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer__socials">
+            <ul class="social-list" role="list" aria-label="Social links">
+              <li>
+                <a aria-label="instagram" href="#"
+                  ><svg class="social-icon">
+                    <use
+                      xlink:href="/images/social-icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="linkedin" href="#"
+                  ><svg class="social-icon">
+                    <use
+                      xlink:href="/images/social-icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__nav">
+            <nav class="footer-nav">
+              <ul
+                class="flow"
+                style="--flow-spacer: 0.75em"
+                aria-label="Footer"
+                role="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog Posts</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Ipsum</a></li>
+                <li><a href="#">Dolor</a></li>
+                <li><a href="#">Sit</a></li>
+                <li><a href="#">Amet</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__form">
+            <form action="">
+              <input
+                class="fs-300"
+                id="email"
+                type="email"
+                name="email"
+                placeholder="hello@email.com" />
+              <button class="button button--primary">Go</button>
+            </form>
+          </div>
+
+          <div class="footer__disclaimer">
+            <p class="fs-300">© 2024 anaherawashere</p>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

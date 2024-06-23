@@ -10,186 +10,332 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="./images/Favicon.png" />
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
   </head>
 
   <body>
-    <nav>
-      <div class="nav__logo">
-        <a href="./index.html"
-          ><img src="./images/quotation-marks-open.png" alt="logo"
-        /></a>
-      </div>
-      <div class="nav__links">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/index.html#blog-posts">Blog Posts</a></li>
-          <li><a href="#">Dolor</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <header class="home">
-      <div class="header__home">
-        <h1>Anahera's Blog</h1>
-      </div>
-      <div class="subheading__home">
-        <h2>
-          I made this website to host all of my blog posts for Dev Academy! I
-          hope it works and doesn't break lol.
-        </h2>
+    <header class="primary-header | bg-primarySuperLight">
+      <div class="container" style="--maxwidth: 100%">
+        <div class="flex ai--c jc--sb">
+          <a aria-label="logo" href="/index.html">
+            <svg class="header-logo" width="60px" height="60px">
+              <use xlink:href="/images/logo.svg#logo"></use>
+            </svg>
+          </a>
+          <button
+            class="mobile-nav-toggle"
+            aria-controls="primary-navigation"
+            aria-expanded="false">
+            <svg class="nav-icon icon-close" aria-hidden="true">
+              <use xlink:href="/images/nav-icons.svg#icon-close"></use>
+            </svg>
+            <svg class="nav-icon icon-hamburger" aria-hidden="true">
+              <use xlink:href="/images/nav-icons.svg#icon-hamburger"></use>
+            </svg>
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <nav class="primary-navigation" id="primary-navigation">
+            <ul aria-label="Primary" role="list" class="nav-list flex">
+              <li><a href="/index.html#blog-posts">Blog</a></li>
+              <li><a href="#">✨ Surprise ✨</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="button button--primary | mbl--hide">
+            I'm a button
+          </button>
+        </div>
       </div>
     </header>
 
-    <!-- <div class="image-grid">
-      <div class="image-grid-item_a"></div>
-      <div class="image-grid-item_b"></div>
-      <div class="image-grid-item_c"></div>
-      <div class="image-grid-item_d"></div>
-      <div class="image-grid-item_e"></div>
-      <div class="image-grid-item_f"></div>
-    </div> -->
-
-    <div class="row__cards">
-      <h3 id="blog-posts">Blog posts</h3>
-      <ul class="cards">
-        <li class="card__list">
-          <a href="/blog/te-houtaewa-template.html" class="card">
-            <div class="blog-preview__card">
-              <div class="blog-preview__image">
-                <img
-                  src="./images/pexels-hilaryh-green.jpg"
-                  alt="sprint 1 image of green leaves with water droplets" />
-              </div>
-              <div class="blog-preview__title">
-                <h6 class="card__date">10 November, 2010</h6>
-                <h4>Te Houtaewa Template</h4>
-                <a
-                  class="button read-more"
-                  href="./blog/te-houtaewa-template.html"
-                  >Read more</a
-                >
-              </div>
+    <main>
+      <section class="bg-primarySuperLight padding-block-600">
+        <div class="container">
+          <div class="even-columns | vertical-align-center row-reverse">
+            <div class="flow">
+              <h1
+                class="add-flow | fs-primary-heading fw-bold"
+                style="--flow-spacer: 0.5em">
+                Kia ora, <br />I'm Anahera 👋
+              </h1>
+              <p class="fs-500">
+                Welcome to my blog, where I’ll be documenting my learnings in
+                the world of web dev.
+              </p>
+              <p class="fs-500">
+                From the basics to the not-so-basics, join me as I figure things
+                out, make loads of mistakes, and occasionally celebrate with a
+                chocky biscuit or two.
+              </p>
+              <button class="button button--primary">I'm a button</button>
             </div>
-          </a>
-        </li>
-        <li class="card__list">
-          <a href="/blog/html-css.html" class="card">
-            <div class="blog-preview__card">
-              <div class="blog-preview__image">
-                <img
-                  src="./images/pexels-digijohan-red.jpg"
-                  alt="sprint 2 image of rows of red stadium seats" />
-              </div>
-              <div class="blog-preview__title">
-                <h6 class="card__date">13 June, 2024</h6>
-                <h4>
-                  What are the differences between relative, absolute, and fixed
-                  positioning?
-                </h4>
-                <a class="button read-more" href="/blog/html-css.html"
-                  >Read more</a
-                >
-              </div>
+            <div class="move-ontop">
+              <img
+                class="rounded"
+                src="images/anahera.jpeg"
+                alt="a pretty photo of Anahera smiling with greenery in the background" />
             </div>
-          </a>
-        </li>
-        <li class="card__list">
-          <a href="/blog/identity-values.html" class="card"
-            ><div class="blog-preview__card">
-              <div class="blog-preview__image">
-                <img
-                  src="./images/pexels-enginakyurt-yellow.jpg"
-                  alt="close up of yellow knitted pattern" />
-              </div>
-              <div class="blog-preview__title">
-                <h6 class="card__date">4 June, 2024</h6>
-                <h4>Identity, Values and Strengths Exploration</h4>
-                <a class="button read-more" href="/blog/identity-values.html"
-                  >Read more</a
-                >
-              </div>
-            </div></a
-          >
-        </li>
-        <li class="card__list">
-          <a href="/blog/learning-plan.html" class="card"
-            ><div class="blog-preview__card">
-              <div class="blog-preview__image">
-                <img
-                  src="./images/pexels-matthardy-blue.jpg"
-                  alt="close up of moody blue ocean" />
-              </div>
-              <div class="blog-preview__title">
-                <h6 class="card__date">14 June, 2024</h6>
-                <h4>My learning plan</h4>
-                <a class="button read-more" href="/blog/learning-plan.html"
-                  >Read more</a
-                >
-              </div>
-            </div></a
-          >
-        </li>
-        <li class="card__list">
-          <a href="/blog/emotional-intelligence.html" class="card"
-            ><div class="blog-preview__card">
-              <div class="blog-preview__image">
-                <img
-                  src="./images/pexels-googledeepmind-purplebrain.jpg"
-                  alt="modern graphic of a purple brain in a tech scene" />
-              </div>
-              <div class="blog-preview__title">
-                <h6 class="card__date">17 June, 2024</h6>
-                <h4>Emotional Intelligence</h4>
-                <a
-                  class="button read-more"
-                  href="/blog/emotional-intelligence.html"
-                  >Read more</a
-                >
-              </div>
-            </div></a
-          >
-        </li>
-        <li class="card__list">
-          <a href="/blog/javascript-dom.html" class="card"
-            ><div class="blog-preview__card">
-              <div class="blog-preview__image">
-                <img
-                  src="./images/pexels-mo-eid-bluepink.jpg"
-                  alt="graphic pattern of pink stairs with blue shadows" />
-              </div>
-              <div class="blog-preview__title">
-                <h6 class="card__date">19 June, 2024</h6>
-                <h4>What I've learnt about Javascript and the DOM so far...</h4>
-                <a class="button read-more" href="/blog/javascript-dom.html"
-                  >Read more</a
-                >
-              </div>
-            </div></a
-          >
-        </li>
-      </ul>
-    </div>
+          </div>
+        </div>
+      </section>
 
-    <footer>
-      <div class="footer__decoration">
-        <img
-          src="/images/quotation-marks-closed.png"
-          alt="closed quotation logo" />
-      </div>
-      <div class="footer__title">
-        <h1 id="footer-heading">This is a footer.</h1>
-        <a class="btn btn-inverted" href="#">And I am a button</a>
-      </div>
-      <div class="footer__links">
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="#">Lorem</a></li>
-          <li><a href="#">Ipsum</a></li>
-          <li><a href="#">Dolor</a></li>
-        </ul>
-        <p class="footer small">© 2024 anaherawashere</p>
+      <section class="bg-primarySuperLight padding-block-800">
+        <div class="container" style="--maxwidth: 90rem">
+          <div class="full-width">
+            <div>
+              <h3 id="blog-posts" class="fs-600 fw-bold ff-upper">
+                Blog posts
+              </h3>
+            </div>
+            <div class="add-flow">
+              <ul class="cards" aria-label="Blog previews" role="list">
+                <li class="card">
+                  <a href="/blog/te-houtaewa-template.html">
+                    <div class="flow" style="--flow-spacer: 0.8em">
+                      <div class="card__image rounded">
+                        <img
+                          src="./images/pexels-hilaryh-green.jpg"
+                          alt="sprint 1 image of green leaves with water droplets" />
+                      </div>
+                      <div class="blog-preview__title">
+                        <h6 class="fs-300 text-primaryDarker fw-bold ff-pill">
+                          10 November, 2010
+                        </h6>
+                        <h4 class="fs-550 fw-bold">Te Houtaewa Template</h4>
+                        <div>
+                          <a href="/blog/te-houtaewa-template.html">
+                            <button class="button button--underlined">
+                              Read more
+                            </button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="card">
+                  <a href="/blog/html-css.html">
+                    <div class="flow" style="--flow-spacer: 0.8em">
+                      <div class="card__image rounded">
+                        <img
+                          src="./images/pexels-digijohan-red.jpg"
+                          alt="sprint 2 image of rows of red stadium seats" />
+                      </div>
+                      <div class="blog-preview__title">
+                        <h6 class="fs-300 text-primaryDarker fw-bold ff-pill">
+                          13 June, 2024
+                        </h6>
+                        <h4 class="fs-550 fw-bold">
+                          What are the differences between relative, absolute,
+                          and fixed positioning?
+                        </h4>
+                        <div>
+                          <a href="/blog/html-css.html">
+                            <button class="button button--underlined">
+                              Read more
+                            </button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="card">
+                  <a href="/blog/identity-values.html">
+                    <div class="flow" style="--flow-spacer: 0.8em">
+                      <div class="card__image rounded">
+                        <img
+                          src="./images/pexels-enginakyurt-yellow.jpg"
+                          alt="close up of yellow knitted pattern" />
+                      </div>
+                      <div class="blog-preview__title">
+                        <h6 class="fs-300 text-primaryDarker fw-bold ff-pill">
+                          4 June, 2024
+                        </h6>
+                        <h4 class="fs-550 fw-bold">
+                          Identity, Values and Strengths Exploration
+                        </h4>
+                        <div>
+                          <a href="/blog/identity-values.html">
+                            <button class="button button--underlined">
+                              Read more
+                            </button>
+                          </a>
+                        </div>
+                      </div>
+                    </div></a
+                  >
+                </li>
+                <li class="card">
+                  <a href="/blog/learning-plan.html">
+                    <div class="flow" style="--flow-spacer: 0.8em">
+                      <div class="card__image rounded">
+                        <img
+                          src="./images/pexels-anniroenkae-purple.jpg"
+                          alt="close up of thick paint in different shade of purple with glitter" />
+                      </div>
+                      <div class="blog-preview__title">
+                        <h6 class="fs-300 text-primaryDarker fw-bold ff-pill">
+                          14 June, 2024
+                        </h6>
+                        <h4 class="fs-550 fw-bold">My learning plan</h4>
+                        <div>
+                          <a href="/blog/learning-plan.html">
+                            <button class="button button--underlined">
+                              Read more
+                            </button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="card">
+                  <a href="/blog/emotional-intelligence.html"
+                    ><div class="flow" style="--flow-spacer: 0.8em">
+                      <div class="card__image rounded">
+                        <img
+                          src="/images/pexels-pixabay-orange.jpg"
+                          alt="orange clay rocks forming swirls and hills" />
+                      </div>
+                      <div class="blog-preview__title">
+                        <h6 class="fs-300 text-primaryDarker fw-bold ff-pill">
+                          17 June, 2024
+                        </h6>
+                        <h4 class="fs-550 fw-bold">Emotional Intelligence</h4>
+                        <div>
+                          <a href="/blog/emotional-intelligence.html">
+                            <button class="button button--underlined">
+                              Read more
+                            </button>
+                          </a>
+                        </div>
+                      </div>
+                    </div></a
+                  >
+                </li>
+
+                <li class="card">
+                  <a href="/blog/javascript-dom.html">
+                    <div class="flow" style="--flow-spacer: 0.8em">
+                      <div class="card__image rounded">
+                        <img
+                          src="./images/pexels-pixabay-lightblue.jpg"
+                          alt="close up of clear blue pool water with light ripples" />
+                      </div>
+                      <div class="blog-preview__title">
+                        <h6 class="fs-300 text-primaryDarker fw-bold ff-pill">
+                          19 June, 2024
+                        </h6>
+                        <h4 class="fs-550 fw-bold">
+                          What I've learnt about Javascript and the DOM so
+                          far...
+                        </h4>
+                        <div>
+                          <a href="/blog/javascript-dom.html">
+                            <button class="button button--underlined">
+                              Read more
+                            </button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta | bg-primaryDark text-white padding-block-800">
+        <div class="container">
+          <div class="even-columns vertical-align-center">
+            <div>
+              <p class="fs-secondary-heading fw-bold left-mb-center">
+                Some kinda call to action copy goes here.
+              </p>
+            </div>
+            <div class="justify-self-end">
+              <button class="button button--inverted">I'm a button</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="primary-footer | bg-black text-primaryLighter padding-block-800">
+      <div class="container">
+        <div class="even-columns">
+          <div class="footer__logo">
+            <a href="#">
+              <svg class="footer-logo" width="60px" height="60px">
+                <use xlink:href="/images/logo.svg#logo"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer__socials">
+            <ul class="social-list" role="list" aria-label="Social links">
+              <li>
+                <a aria-label="instagram" href="#"
+                  ><svg class="social-icon">
+                    <use
+                      xlink:href="/images/social-icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="linkedin" href="#"
+                  ><svg class="social-icon">
+                    <use
+                      xlink:href="/images/social-icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__nav">
+            <nav class="footer-nav">
+              <ul
+                class="flow"
+                style="--flow-spacer: 0.75em"
+                aria-label="Footer"
+                role="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog Posts</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Ipsum</a></li>
+                <li><a href="#">Dolor</a></li>
+                <li><a href="#">Sit</a></li>
+                <li><a href="#">Amet</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__form">
+            <form action="">
+              <input
+                class="fs-300"
+                id="email"
+                type="email"
+                name="email"
+                placeholder="hello@email.com" />
+              <button class="button button--primary">Go</button>
+            </form>
+          </div>
+
+          <div class="footer__disclaimer">
+            <p class="fs-300">© 2024 anaherawashere</p>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

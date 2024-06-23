@@ -3,195 +3,317 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/styles/main.css" rel="stylesheet" type="text/css" />
     <title>Identity, Values, and Strengths</title>
+    <link href="/styles/main.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
   </head>
 
   <body>
-    <nav>
-      <div class="nav__logo">
-        <a href="/index.html">
-          <img src="/images/quotation-marks-open.png" alt="logo"
-        /></a>
-      </div>
-
-      <div class="nav__links">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/index.html#blog-posts">Blog Posts</a></li>
-          <li><a href="#">Dolor</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <header class="blog">
-      <div class="header__blog">
-        <h1>Identity, Values, and Strengths</h1>
-      </div>
-      <div class="subheading__blog">
-        <h5 class="blog__author">Anahera</h5>
-        <h5 class="blog__date">4 June, 2024</h5>
+    <header class="primary-header | bg-primarySuperLight">
+      <div class="container" style="--maxwidth: 100%">
+        <div class="flex ai--c jc--sb">
+          <a aria-label="logo" href="/index.html">
+            <svg class="header-logo" width="60px" height="60px">
+              <use xlink:href="/images/logo.svg#logo"></use>
+            </svg>
+          </a>
+          <button
+            class="mobile-nav-toggle"
+            aria-controls="primary-navigation"
+            aria-expanded="false">
+            <svg class="nav-icon icon-close" aria-hidden="true">
+              <use xlink:href="/images/nav-icons.svg#icon-close"></use>
+            </svg>
+            <svg class="nav-icon icon-hamburger" aria-hidden="true">
+              <use xlink:href="/images/nav-icons.svg#icon-hamburger"></use>
+            </svg>
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <nav class="primary-navigation" id="primary-navigation">
+            <ul aria-label="Primary" role="list" class="nav-list flex">
+              <li><a href="/index.html#blog-posts">Blog</a></li>
+              <li><a href="#">✨ Surprise ✨</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="button button--primary | mbl--hide">
+            I'm a button
+          </button>
+        </div>
       </div>
     </header>
 
-    <div class="blog__content">
-      <div class="blog__image">
-        <img
-          src="/images/pexels-enginakyurt-yellow.jpg"
-          alt="close up of yellow knitted pattern" />
-      </div>
-
-      <h2>
-        Explain a situation where you have made an ethical decision. Discuss how
-        you weighed up the values involved in that decision, the decision you
-        made, and how you reflect on the decision now.
-      </h2>
-
-      <p>
-        During the first COVID-19 lockdown, I was asked to jump on the phones to
-        help with donation cancellation calls because the person who usually
-        handled them was overwhelmed. I was given a script that had me ask
-        people to downgrade their gift or pause it before finally agreeing to
-        cancel their donation.
-      </p>
-
-      <p>
-        I felt super uncomfortable asking these questions. Most people were
-        calling because they had lost their jobs or weren't getting paid during
-        the lockdown and had no extra money to give. It felt ethically wrong to
-        ask them to continue donating in any form when they were struggling
-        themselves.
-      </p>
-
-      <p>
-        But I knew I had to ask because people still had cancer, and our
-        organisation’s services were needed more than ever. If I didn’t at least
-        ask, we might lose a supporter who didn’t realise they had options other
-        than cancelling outright.
-      </p>
-
-      <p>
-        Now, looking back, I think that experience was a great learning moment
-        for me. It taught me to evaluate situations carefully and to push
-        through uncomfortable feelings for the greater good. I realised that
-        providing people with all their options helps them make informed
-        decisions, which is crucial. This experience definitely helped make me a
-        better fundraiser.
-      </p>
-
-      <h2>
-        Describe how your culture and the people around you have influenced your
-        values and identity.
-      </h2>
-
-      <p>
-        Te Ao Māori shapes the way I see the world. The biggest thing is
-        understanding that everything is connected. I tend to look at things
-        holistically and see how even the smallest details are part of something
-        bigger. My relationship with people and the way I treat them is also
-        deeply influenced by manaakitanga, which drives me to show respect,
-        generosity, and care.
-      </p>
-
-      <p>
-        I am very intentional about the people I have around me. I gravitate
-        towards those who think and care deeply and are authentically
-        themselves. I appreciate friends who enjoy having deep conversations but
-        also respect quiet moments and love being silly, whether it's talking
-        about TikToks or juicy gossip. I value kindness and am drawn to people
-        who challenge me to see the world differently and inspire me to care
-        more deeply about new things.
-      </p>
-
-      <h2>
-        Identify your strengths and how they will support you during your
-        learning journey.
-      </h2>
-
-      <p>
-        My strengths are my creativity, curiosity and connecting with people. My
-        sense is that I fit being a programmer and the mindset of
-        problem-solving - some of my favourite things to do at work is coming up
-        with creative solutions. And the stuff about the role being more than
-        concepts and more human skills suits me great. I'm really riding on the
-        sparkling personality bit!
-      </p>
-
-      <h2>
-        Evaluate your limitations in terms of your learning and career
-        development. How might these affect your learning journey?
-      </h2>
-
-      <p>
-        In the same vein of problem-solving, I think I tend to sit on problems
-        longer than I should before I ask for help. I like how that has been
-        mentioned a few times to stick to the timebox and ask for help so you
-        can move on. I think having that culture from the get go and knowing
-        that there are lots of others in the same boat is super helpful.
-      </p>
-
-      <h2>
-        Share an example of when you were trying to work productively with
-        others, but there was resistance or tension. Discuss strategies you
-        tried at the time, how effective they were, and your reflections on what
-        other strategies you would try now and why.
-      </h2>
-
-      <p>
-        I had a situation where I wanted to introduce a planning tool like
-        Monday.com to replace our project planner in Excel spreadsheets. I
-        needed something more functional, but some of the team were resistant to
-        learning a new tool.
-      </p>
-
-      <p>
-        To address this, I worked through introducing and teaching people how to
-        use it. I had team members explore the tool before we officially
-        implemented it and gave them the opportunity to ask questions. It
-        reminded me of flipped learning, where you introduce new concepts for
-        people to explore on their own before diving into them fully. However,
-        not everyone took the time to trial the tool on their own, which limited
-        the effectiveness of this approach.
-      </p>
-
-      <p>
-        If I were to try again, I would probably introduce the idea of a new
-        tool when I first started researching my options. Surprising people with
-        something new was a mistake. I think they would have been less resistant
-        if they had felt part of the journey from the beginning.
-      </p>
-
-      <p>
-        By involving the team early on and seeking their input during the
-        research phase, they would likely feel more invested and open to the
-        change. This approach could foster a sense of ownership and reduce
-        resistance, making the transition smoother and more collaborative.
-      </p>
-    </div>
-
-    <footer>
-      <div class="footer__title">
-        <div class="footer__decoration">
-          <img
-            src="/images/quotation-marks-closed.png"
-            alt="closed quotation logo" />
+    <main>
+      <section>
+        <div class="container">
+          <div class="padding-block-800 row-small">
+            <div class="fs-750 fw-semibold">
+              <h2 class="blog-section">Identity, Values, and Strengths</h2>
+            </div>
+            <div class="flex">
+              <h5 class="fs-300 fw-semibold">Anahera</h5>
+              <h5 class="fs-300 fw-semibold">4 June, 2024</h5>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <h1 id="footer-heading">This is a footer.</h1>
+      <section>
+        <div class="container">
+          <div class="blog__image">
+            <img
+              src="/images/pexels-enginakyurt-yellow.jpg"
+              alt="close up of yellow knitted pattern" />
+          </div>
+        </div>
+      </section>
 
-        <a class="btn btn-inverted" href="#">And I am a button</a>
-      </div>
+      <section>
+        <div class="container">
+          <div class="blog__content | row-small padding-block-800">
+            <div class="blog-body">
+              <h3 class="blog-section | fs-600">
+                Explain a situation where you have made an ethical decision.
+              </h3>
+              <p class="fs-400 fw-semibold">
+                Discuss how you weighed up the values involved in that decision,
+                the decision you made, and how you reflect on the decision now.
+              </p>
 
-      <div class="footer__links">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="#">Lorem</a></li>
-          <li><a href="#">Ipsum</a></li>
-          <li><a href="#">Dolor</a></li>
-        </ul>
+              <p>
+                During the first COVID-19 lockdown, I was asked to jump on the
+                phones to help with donation cancellation calls because the
+                person who usually handled them was overwhelmed. I was given a
+                script that had me ask people to downgrade their gift or pause
+                it before finally agreeing to cancel their donation.
+              </p>
 
-        <p class="footer small">© 2024 anaherawashere</p>
+              <p>
+                I felt super uncomfortable asking these questions. Most people
+                were calling because they had lost their jobs or weren't getting
+                paid during the lockdown and had no extra money to give. It felt
+                ethically wrong to ask them to continue donating in any form
+                when they were struggling themselves.
+              </p>
+
+              <p>
+                But I knew I had to ask because people still had cancer, and our
+                organisation’s services were needed more than ever. If I didn’t
+                at least ask, we might lose a supporter who didn’t realise they
+                had options other than cancelling outright.
+              </p>
+
+              <p>
+                Now, looking back, I think that experience was a great learning
+                moment for me. It taught me to evaluate situations carefully and
+                to push through uncomfortable feelings for the greater good. I
+                realised that providing people with all their options helps them
+                make informed decisions, which is crucial. This experience
+                definitely helped make me a better fundraiser.
+              </p>
+
+              <h3 class="blog-section | fs-600">
+                Describe how your culture and the people around you have
+                influenced your values and identity.
+              </h3>
+
+              <p>
+                Te Ao Māori shapes the way I see the world. The biggest thing is
+                understanding that everything is connected. I tend to look at
+                things holistically and see how even the smallest details are
+                part of something bigger. My relationship with people and the
+                way I treat them is also deeply influenced by manaakitanga,
+                which drives me to show respect, generosity, and care.
+              </p>
+
+              <p>
+                I am very intentional about the people I have around me. I
+                gravitate towards those who think and care deeply and are
+                authentically themselves. I appreciate friends who enjoy having
+                deep conversations but also respect quiet moments and love being
+                silly, whether it's talking about TikToks or juicy gossip. I
+                value kindness and am drawn to people who challenge me to see
+                the world differently and inspire me to care more deeply about
+                new things.
+              </p>
+
+              <h3 class="blog-section | fs-600">
+                Identify your strengths and how they will support you during
+                your learning journey.
+              </h3>
+
+              <p>
+                My strengths are my creativity, curiosity and connecting with
+                people. My sense is that I fit being a programmer and the
+                mindset of problem-solving - some of my favourite things to do
+                at work is coming up with creative solutions. And the stuff
+                about the role being more than concepts and more human skills
+                suits me great. I'm really riding on the sparkling personality
+                bit!
+              </p>
+
+              <h3 class="blog-section | fs-600">
+                Evaluate your limitations in terms of your learning and career
+                development.
+              </h3>
+              <p class="fs-400 fw-semibold">
+                How might these affect your learning journey?
+              </p>
+
+              <p>
+                In the same vein of problem-solving, I think I tend to sit on
+                problems longer than I should before I ask for help. I like how
+                that has been mentioned a few times to stick to the timebox and
+                ask for help so you can move on. I think having that culture
+                from the get go and knowing that there are lots of others in the
+                same boat is super helpful.
+              </p>
+
+              <h3 class="blog-section | fs-600">
+                Share an example of when you were trying to work productively
+                with others, but there was resistance or tension.
+              </h3>
+              <p class="fs-400 fw-semibold">
+                Discuss strategies you tried at the time, how effective they
+                were, and your reflections on what other strategies you would
+                try now and why.
+              </p>
+
+              <p>
+                I had a situation where I wanted to introduce a planning tool
+                like Monday.com to replace our project planner in Excel
+                spreadsheets. I needed something more functional, but some of
+                the team were resistant to learning a new tool.
+              </p>
+
+              <p>
+                To address this, I worked through introducing and teaching
+                people how to use it. I had team members explore the tool before
+                we officially implemented it and gave them the opportunity to
+                ask questions. It reminded me of flipped learning, where you
+                introduce new concepts for people to explore on their own before
+                diving into them fully. However, not everyone took the time to
+                trial the tool on their own, which limited the effectiveness of
+                this approach.
+              </p>
+
+              <p>
+                If I were to try again, I would probably introduce the idea of a
+                new tool when I first started researching my options. Surprising
+                people with something new was a mistake. I think they would have
+                been less resistant if they had felt part of the journey from
+                the beginning.
+              </p>
+
+              <p>
+                By involving the team early on and seeking their input during
+                the research phase, they would likely feel more invested and
+                open to the change. This approach could foster a sense of
+                ownership and reduce resistance, making the transition smoother
+                and more collaborative.
+              </p>
+            </div>
+
+            <div class="blog__content-nav move-ontop">
+              <ul
+                class="blog__nav | sticky | fs-300 fw-semibold left-border-line"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta | bg-primaryDark text-white padding-block-800">
+        <div class="container">
+          <div class="even-columns vertical-align-center">
+            <div>
+              <p class="fs-secondary-heading fw-bold left-mb-center">
+                Some kinda call to action copy goes here.
+              </p>
+            </div>
+            <div class="justify-self-end">
+              <button class="button button--inverted">I'm a button</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="primary-footer | bg-black text-primaryLighter padding-block-800">
+      <div class="container">
+        <div class="even-columns">
+          <div class="footer__logo">
+            <a href="#">
+              <svg class="footer-logo" width="60px" height="60px">
+                <use xlink:href="/images/logo.svg#logo"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer__socials">
+            <ul class="social-list" role="list" aria-label="Social links">
+              <li>
+                <a aria-label="instagram" href="#"
+                  ><svg class="social-icon">
+                    <use
+                      xlink:href="/images/social-icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="linkedin" href="#"
+                  ><svg class="social-icon">
+                    <use
+                      xlink:href="/images/social-icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__nav">
+            <nav class="footer-nav">
+              <ul
+                class="flow"
+                style="--flow-spacer: 0.75em"
+                aria-label="Footer"
+                role="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog Posts</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Ipsum</a></li>
+                <li><a href="#">Dolor</a></li>
+                <li><a href="#">Sit</a></li>
+                <li><a href="#">Amet</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__form">
+            <form action="">
+              <input
+                class="fs-300"
+                id="email"
+                type="email"
+                name="email"
+                placeholder="hello@email.com" />
+              <button class="button button--primary">Go</button>
+            </form>
+          </div>
+
+          <div class="footer__disclaimer">
+            <p class="fs-300">© 2024 anaherawashere</p>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
