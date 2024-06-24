@@ -748,9 +748,15 @@ strong {
   }
 
   .blog-body > h4 {
-    /* text-wrap: wrap; */
-    margin-top: var(--size-700);
     line-height: 1.5;
+  }
+
+  .blog-body > h3 ~ h4 {
+    margin-top: var(--size-700);
+  }
+
+  .blog-body > h3 + h4 {
+    margin-top: var(--size-400);
   }
 }
 
