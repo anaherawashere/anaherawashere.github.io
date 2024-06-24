@@ -746,6 +746,12 @@ strong {
     grid-template-columns: 3fr 1fr;
     gap: 6rem;
   }
+
+  .blog-body > h4 {
+    /* text-wrap: wrap; */
+    margin-top: var(--size-700);
+    line-height: 1.5;
+  }
 }
 
 :where(.blog-body :not(:first-child)) {
@@ -754,7 +760,11 @@ strong {
 
 .blog-body :where(ul, ol) {
   padding-left: var(--size-400);
-  list-style-position: inside;
+  list-style-position: outside;
+}
+
+.blog-body li {
+  padding-left: var(--size-200);
 }
 
 :where(.blog-body > .fs-600:not(:first-of-type)) {
