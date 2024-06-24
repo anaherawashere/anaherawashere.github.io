@@ -888,3 +888,64 @@ strong {
   bottom: 0;
   right: 0;
 }
+
+/* SPRINT 4 TABLE */
+
+table {
+  width: 100%;
+  border-radius: var(--corners-sharp);
+  border-collapse: collapse;
+  box-shadow: var(--shadow);
+  background: var(--color-primaryLighter);
+  border: 1px solid var(--color-primaryLight);
+  border-bottom: 3px solid var(--color-primaryDark);
+}
+
+caption,
+th,
+td {
+  padding: var(--size-200);
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-primaryDark);
+  color: var(--color-white);
+}
+
+th,
+td {  
+  border: 1px solid var(--color-primaryLight);
+  text-wrap: pretty;
+}
+
+tr:nth-of-type(2n) {
+  background: var(--color-primarySuperLight);
+}
+
+@media (max-width: 50em) {
+  th {
+    display: none;
+  }
+
+  tr,
+  td {
+    margin: 0;
+  }
+
+  td {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+  }
+
+  td::before {
+    content: attr(data-cell) ": ";
+    font-weight: var(--fw-semibold);
+    text-transform: capitalize;
+  }
+}
