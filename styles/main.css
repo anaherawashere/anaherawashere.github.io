@@ -813,7 +813,13 @@ strong {
 }
 
 .blog__image img {
+  width: 100%;
   object-fit: cover;
+}
+
+.image-source {
+  text-align: center;
+  margin-top: var(--size-300);
 }
 
 .code-snippet {
