@@ -710,6 +710,10 @@ strong {
 }
 
 /* Text Alignment */
+.ff-center {
+  text-align: center;
+}
+
 .left-mb-center {
   text-align: center;
 }
@@ -957,6 +961,14 @@ td {
 
 tr:nth-of-type(2n) {
   background: var(--color-primarySuperLight);
+}
+
+ul[role="list"] {
+  padding-left: 0;
+}
+
+ul[role="list"] > li {
+  display: inline-block;
 }
 
 @media (max-width: 50em) {
