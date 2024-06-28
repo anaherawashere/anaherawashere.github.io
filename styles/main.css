@@ -697,6 +697,12 @@ strong {
   font-size: var(--fs-800);
 }
 
+@media (min-width: 50em) {
+  .desktop-fs-550 {
+    font-size: var(--fs-550);
+  }
+}
+
 /* Font styling */
 .ff-upper {
   text-transform: uppercase;
@@ -710,8 +716,8 @@ strong {
 }
 
 /* Text Alignment */
-.ff-center {
-  text-align: center;
+.center-mb-left {
+  text-align: left;
 }
 
 .left-mb-center {
@@ -721,6 +727,10 @@ strong {
 @media (min-width: 50em) {
   .left-mb-center {
     text-align: left;
+  }
+
+  .center-mb-left {
+    text-align: center;
   }
 }
 
