@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link href="/styles/main.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
+  </head>
+
+  <body>
+    <header class="primary-header | bg-primarySuperLight">
+      <div class="container" style="--maxwidth: 100%">
+        <div class="flex ai--c jc--sb">
+          <a aria-label="logo" href="/index.html">
+            <svg class="header-logo" width="60px" height="60px">
+              <use xlink:href="/images/logo.svg#logo"></use>
+            </svg>
+          </a>
+          <button
+            class="mobile-nav-toggle"
+            aria-controls="primary-navigation"
+            aria-expanded="false">
+            <svg class="nav-icon icon-close" aria-hidden="true">
+              <use xlink:href="/images/nav-icons.svg#icon-close"></use>
+            </svg>
+            <svg class="nav-icon icon-hamburger" aria-hidden="true">
+              <use xlink:href="/images/nav-icons.svg#icon-hamburger"></use>
+            </svg>
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <nav class="primary-navigation" id="primary-navigation">
+            <ul aria-label="Primary" role="list" class="nav-list flex">
+              <li><a href="/index.html#blog-posts">Blog</a></li>
+              <li><a href="/surprise.html">✨ Surprise ✨</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="button button--primary | mbl--hide">
+            I'm a button
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container">
+          <div class="padding-block-800 row-small">
+            <div class="fs-750 fw-semibold">
+              <h2 class="blog-section">
+                Problem Solving
+              </h2>
+            </div>
+            <div class="flex">
+              <h5 class="fs-300 fw-semibold">Anahera</h5>
+              <h5 class="fs-300 fw-semibold">28 June, 2024</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="blog__image">
+            <img
+              src="/images/pexels-pixabay-fire.jpg"
+              alt="flames in the night sky" />
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="blog__content | row-small padding-block-800">
+          <div class="blog-body">
+            <h3 class="blog-section | fs-600">
+              A time I was blocked on a simple problem
+            </h3>
+            <p>
+              I was working on a bunch of small challenges and I got stuck on all of them atleast once! There was one in particular that I was so sure should work. 
+            </p>
+            <p>
+              I checked some of the conversations other people were having about the same challenge and I googled each concept in my solution to make sure I was structuring it correctly - I couldn't figure out why it wasn't working! 
+            </p>
+            <p>
+              Then out of frustration I decided to read it aloud to myself, literally going line by line and explaining what each bit was doing. And then I I said something aloud that sounded funny and I found a typo 😭 I had used the plural of a word that should've been singular.
+          </p>
+          <p>
+            So I guess reading aloud and explaining things to yourself again is a really great problem solving method.
+          </p>
+            <h3 class="blog-section | fs-600">Solving a proglem elegantly</h3>
+            <p>
+              Not sure if this is elegant 💅 enough but in Javascript you can repeat tasks over and over using 'loops' rather than having to rewrite the same task each time. There are a few different ways to write loops and some might be better in different scenarios.
+              There is one type of loop I feel semi-confident in, it's the 'for' loop. But it's pretty long to write and other loops can acheive the same thing a bit more efficiently.
+            </p>
+            <p>
+              So I had a challenge where I needed to use a loop but they way I was writing it out felt really long and I had to add layers of other functions to be able to get the solution I wanted. I got about half way and then though nah, I have to try them other loops people keep mentioning. So I did a youtube search of people explaining one of these fancier loops and I was able to write my solution in like 3 lines!
+            </p>
+            <p>
+              I think I could have done what I needed to with the skills I already had (the longer version) but it just wouldn't have been that efficient and I wouldn't learn much new from doing the same thing over and over. I was super pleased I got the solution I wanted and was able to learn something new!
+            </p>
+          </div>
+
+          <div class="blog__content-nav move-ontop">
+            <ul
+              class="blog__nav | sticky | fs-300 fw-semibold left-border-line"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta | bg-primaryDark text-white padding-block-800">
+        <div class="container">
+          <div class="even-columns vertical-align-center">
+            <div>
+              <p class="fs-secondary-heading fw-bold left-mb-center">
+                Some kinda call to action copy goes here.
+              </p>
+            </div>
+            <div class="justify-self-end">
+              <button class="button button--inverted">I'm a button</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="primary-footer | bg-black text-primaryLighter padding-block-800">
+      <div class="container">
+        <div class="even-columns">
+          <div class="footer__logo">
+            <a href="#">
+              <svg class="footer-logo" width="60px" height="60px">
+                <use xlink:href="/images/logo.svg#logo"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer__socials">
+            <ul class="social-list" role="list" aria-label="Social links">
+              <li>
+                <a aria-label="instagram" target="_blank" href="https://www.instagram.com/heyanahera/?hl=en"
+                  ><svg class="social-icon">
+                    <use
+                      xlink:href="/images/social-icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="linkedin" target="_blank" href="https://www.linkedin.com/in/afoleypaama/"
+                  ><svg class="social-icon">
+                    <use
+                      xlink:href="/images/social-icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="github" target="_blank" href="https://github.com/anaherawashere"
+                  ><svg class="social-icon">
+                    <use
+                      xlink:href="/images/social-icons.svg#icon-github"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__nav">
+            <nav class="footer-nav">
+              <ul
+                class="flow"
+                style="--flow-spacer: 0.75em"
+                aria-label="Footer"
+                role="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog Posts</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Ipsum</a></li>
+                <li><a href="#">Dolor</a></li>
+                <li><a href="#">Sit</a></li>
+                <li><a href="#">Amet</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__form">
+            <form action="">
+              <input
+                class="fs-300"
+                id="email"
+                type="email"
+                name="email"
+                placeholder="hello@email.com" />
+              <button class="button button--primary">Go</button>
+            </form>
+          </div>
+
+          <div class="footer__disclaimer">
+            <p class="fs-300">© 2024 anaherawashere</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
