@@ -973,11 +973,11 @@ tr:nth-of-type(2n) {
   background: var(--color-primarySuperLight);
 }
 
-ul[role="list"] {
+.blog-body [role="list"] {
   padding-left: 0;
 }
 
-ul[role="list"] > li {
+.blog-body [role="list"] > li {
   display: inline-block;
 }
 
