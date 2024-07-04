@@ -188,9 +188,7 @@ body {
   align-items: center;
 }
 
-.jc--sb {
-  justify-content: space-between;
-}
+.jc--sb { justify-content: space-between; }
 
 .vertical-align-center {
   align-items: center;
@@ -1037,4 +1035,15 @@ tr:nth-of-type(2n) {
     bottom: -5em;
     right: 0;
   }
+}
+
+/* GALLERY */
+
+.gallery {
+  gap: var(--size-300);
+}
+
+.gallery__item {
+  width: 25%;
+  height: auto;
 }
