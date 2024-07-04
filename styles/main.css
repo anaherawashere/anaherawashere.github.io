@@ -184,6 +184,10 @@ body {
   display: flex;
 }
 
+.gap-400 {
+  gap: var(--size-400)
+}
+
 .ai--c {
   align-items: center;
 }
