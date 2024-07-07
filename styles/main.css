@@ -656,6 +656,10 @@ strong {
   font-weight: var(--fw-semibold);
 }
 
+em {
+  font-style: italic;
+}
+
 /* Font sizes */
 .fs-primary-heading {
   font-size: var(--fs-primary-heading);
