@@ -721,6 +721,13 @@ em {
   border-radius: 100vmax;
 }
 
+.ff-underline {
+  border-bottom: 4px solid var(--color-primary);
+  padding-bottom: var(--size-300);
+  margin-bottom: var(--size-500);
+  display: inline-block;
+}
+
 /* Text Alignment */
 .center-mb-left {
   text-align: left;
